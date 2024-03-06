@@ -4,13 +4,13 @@ var nodemailer = require("nodemailer");
 var transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "process.env.mail",
-    pass: "process.env.pass",
+    user: "process.env.SMTP_EMAIL",
+    pass: "process.env.SMTP_PASSWORD",
   },
 });
 
 var mailOptions = {
-  from: "process.env.mail",
+  from: "process.env.SMTP_EMAIL",
   to: "process.env.myself",
   subject: "Hello from another side",
   text: "This is testing of email",
