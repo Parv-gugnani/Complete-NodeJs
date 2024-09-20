@@ -1,0 +1,19 @@
+# Restful API
+
+1. Node js using expressjs , which is build for rest api.
+
+2. API is an acronym for applicaiton programing interface
+
+3. Rest has become standard for building api , by devs over the `RPC(stands for Remote Procedure Call)` and `SOAP(stands for simple object Acess protocol)`
+
+4. REST recommends certain architectural constraints.
+   `Uniform interface
+Statelessness
+Client-server
+Cacheability
+Layered system
+Code on demand`
+
+5. HTTP methods Following four HTTP methods are commonly used in REST based architecture.
+
+6. Post : the post ver in http request indicates that a new resouce created on server. it corresponds to create operation in `CRUD(create , retrive , update, delete)`
