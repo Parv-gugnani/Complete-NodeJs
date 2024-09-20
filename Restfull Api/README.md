@@ -34,3 +34,5 @@
 
 9. DELETE:
    The DELETE method is used to remove resources from the server. An HTTP response code of 200 (OK) is sent upon successful deletion.
+
+> Written By Parv gugnani
