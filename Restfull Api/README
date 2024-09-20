@@ -7,12 +7,13 @@
 3. Rest has become standard for building api , by devs over the `RPC(stands for Remote Procedure Call)` and `SOAP(stands for simple object Acess protocol)`
 
 4. REST recommends certain architectural constraints.
-   `Uniform interface
-Statelessness
-Client-server
-Cacheability
-Layered system
-Code on demand`
+
+   - Uniform interface
+   - Statelessness
+   - Client-server
+   - Cacheability
+   - Layered system
+   - Code on demand
 
 5. HTTP methods Following four HTTP methods are commonly used in REST based architecture.
 
