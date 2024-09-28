@@ -1,18 +1,17 @@
 const { MongoClient } = require("mongodb");
 
 const url = "mongodb://localhost:27017";
-
 const client = new MongoClient(url);
 
 const dbName = "myProject";
 
 async function main() {
   await client.connect();
-  console.log("Connected Sucessfully to server!");
+  console.log("Connected successfully to server");
   const db = client.db(dbName);
   const collection = db.collection("documents");
 
-  return "done";
+  return "done.";
 }
 
 main()
