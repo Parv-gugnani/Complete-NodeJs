@@ -27,20 +27,20 @@
 // }
 
 //new
-
-var dbobj = client.db(myProject, options);
 const { MongoClient } = require("mongodb");
 
 async function main() {
-  const uri = "mongodb://localhost:27017/mydb";
+  const uri = "mongodb://localhost:27017/myProject";
+
   const client = new MongoClient(uri);
 
   try {
-    // Connect to the MongoDB cluster
     await client.connect();
-    await createdb(client, "mydatabase");
+
+    await createdb(client, "myProject");
+  } catch (e) {
+    console.error("Error connecting to MongoDB", e);
   } finally {
-    // Close the connection to the MongoDB cluster
     await client.close();
   }
 }
@@ -48,7 +48,12 @@ async function main() {
 main().catch(console.error);
 
 async function createdb(client, dbname) {
-  const dbobj = await client.db(dbname);
-  console.log("Database created");
-  console.log(dbobj);
+  // Access the db instance
+  const dbobj = client.db(dbname);
+
+  const collection = dbobj.collection("testCollection");
+  const result = await collection.insertOne({ name: "Test Document" });
+
+  console.log("Database and collection created:", dbobj.databaseName);
+  console.log("Document inserted:", result.insertedId);
 }
